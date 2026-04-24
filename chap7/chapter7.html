@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0"> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // CREATING A PROMPT
+        // var name = prompt("what's your name?");
+        // console.log("Hello " + name);
+        // var likesCats = confirm ("Do you like cats");
+        // if (likesCats) {
+        //     console.log("you're a cool cat!");
+        // } else {
+        //     console.log(" yeah, that's fine. you're still cool!");
+        // }
+
+
+        // USING ALERTS
+        // alert("Javascript is awesome!");
+
+        // THE HANGMAN 
+        var word = ["orlin", "kantse", "ethan", "trudie", "luis"];
+
+        var word = word[Math.floor(Math.random() * word.length)]
+
+        var answerArray = [];
+
+        for (var i = 0; i < word.length; i++) {
+            answerArray[i] = "_";
+        }
+
+        var remainingletters = word.length;
+
+        while (remainingletters > 0) {
+            alert(answerArray.join(" "));
+
+            var guess = prompt(" guess a letter, or click cancel to stop playing.");
+
+            if (guess === null) {
+                break;
+            } else if (guess.length !== 1) {
+                alert(" Please enter a single letter");
+            } else {
+                for (var j = 0; j < word.length; j++) {
+                    if (word[j] === guess) {
+                        answerArray[j] = guess;
+                        remainingletters--;
+                    }
+                }    
+
+            }
+
+        }
+        alert(answerArray.join(" "));
+        alert("Good job! the answer was " + word);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
