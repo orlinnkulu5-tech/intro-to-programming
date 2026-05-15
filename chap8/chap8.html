@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+
+
+    // var sayHelloTo = function (name) {
+    //     console.log("Hello" + name + "!");
+    // };
+    // sayHelloTo(" orlin ");
+
+    // var drawCats = function (howManayTimes) {
+    //   for (var i = 0; i < howManayTimes; i++) {
+    //     console.log(i+"=^.^=");
+    //   }
+    // };
+    // drawCats(11);
+
+    //  var double = function (number) {
+    //   return number * 2;
+    //  };
+
+    //  console.log ( double(3));
+
+    // console.log (double(5) + double(6) );
+
+    // console.log (double(double(3)));
+    var pickRandomWord = function (words) {
+      return words[Math.floor(Math.random() * words.length)]
+    };
+
+    // var randomwords = ["planet", "worm" , "flower","cloud"]
+    // console.log(pickRandomWord(randomwords));
+
+
+    // var randomBodyparts = ["Face", "Nose", "Hair", ]
+
+    // var randomAdjectives = ["smelly", "Boring", "stupid"]
+
+    // var randomWords = ["Fly", "marmot", "stick", "Monkey","rat"]
+
+    // var randomstring = "your " + pickRandomWord(randomBodyparts) + " is like a " + pickRandomWord(randomAdjectives) + " " + pickRandomWord(randomWords) + "!!!";
+
+
+
+    // console.log(randomstring);
+    var generateRandomInsult = function () {
+  
+      var randomBodyparts = ["Face", "Nose", "Hair",]
+
+      var randomAdjectives = ["smelly", "Boring", "stupid"]
+
+      var randomWords = ["Fly", "marmot", "stick", "Monkey", "rat"]
+
+      var randomstring = 
+      "your " + 
+      pickRandomWord(randomBodyparts) 
+      + " is like a " + 
+      pickRandomWord(randomAdjectives) 
+      + " " + 
+      pickRandomWord(randomWords) 
+      + "!!!";
+      
+      return randomstring;
+    };
+
+// console.log(generateRandomInsult())
+// console.log(generateRandomInsult())
+
+
+// var fifthLetter = function (name) {
+//   if (name.length < 5) {
+//     console.log ("your name is very short ..." );
+//     return;
+//   }
+//   return " the fifth letter of your name is " +
+//   name[4] + "...";
+// };
+
+// console.log(fifthLetter("orlin"))
+// console.log (fifthLetter("orlin kantse"))
+
+// var medalForScore = function (score ) {
+//   if (score < 3) {
+//     return "bronze";
+//   }
+//   if (score < 7) {
+//     return "silver";
+//   }
+//   return "Gold";
+// };
+// console.log(medalForScore(2));
+// console.log(medalForScore(5));
+// console.log(medalForScore(8));
+
+// function double (number) {
+//   return number * 2;
+// }
+
+// console.log(double(37));
+
+//PROGRAMMING CHALLENGES
+// 1. DOING ARITHMETIC WITH FUNCTIONS
+// function add (arg1, arg2) {
+//   return arg1 + arg2 ;
+// }
+
+// function multiply (arg1, arg2) {
+//   return arg1 * arg2;
+// }
+// var result1 = multiply(36325, 9824);
+// var result2 = add(result1, 777);
+
+
+// console.log(result2);
+var areArraysSame = function (arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (var i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+console.log (areArraysSame([1, 2, 3], [4, 5, 6]));
+// false
+
+areArraysSame([1, 2, 3], [1, 2, 3]);
+// true
+
+areArraysSame([1, 2, 3], [1, 2, 3, 4]);
+// false
+
+
+ </script>
+</body>
+
+</html>
